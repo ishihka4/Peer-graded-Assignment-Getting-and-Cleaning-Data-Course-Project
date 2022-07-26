@@ -37,4 +37,6 @@ names(testrain_meanstd)<-gsub("Gyro", "Gyroscope", names(testrain_meanstd))
 subgroup_testrain_meanstd <- group_by(testrain_meanstd, subid, activity)
 finaldata <- summarise_all(subgroup_testrain_meanstd, mean)
 
+setwd("~/Library/Mobile Documents/com~apple~CloudDocs/R/Cousera/Getting and Cleaning Data/week4/Peer-graded-Assignment-Getting-and-Cleaning-Data-Course-Project")
+write.table(finaldata,"finaldata.txt")
 
